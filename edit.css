@@ -881,6 +881,17 @@ footer {
     }
 }
 
+.container{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.kolom{
+    flex: 1;
+    border: 0px solid #ccc;
+    padding: 15px;
+}
 
 /* ==============================
    RESPONSIVE HP KECIL

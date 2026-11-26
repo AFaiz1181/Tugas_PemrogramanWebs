@@ -12,8 +12,6 @@
 
     <!-- TOPBAR -->
     <div class="topbar">
-        <span>tes github jokowi prabowo</span>
-        <span>pajak baru</span>
         <span>🌿 Kementerian Lingkungan Hidup / Badan Pengendalian Lingkungan Hidup</span>
         <span>📅 Pembaruan 2026 | DKI Jakarta</span>
     </div>
@@ -431,6 +429,65 @@
 
         </section>
 
+        <section id="aduKota" class="section white-box">
+            <div class="container">
+                <div class="kolom">
+                    <div id="adu">
+                        <select id="aduA"></select>
+                        <select id="aduB"></select>
+        
+                        <!-- terkelola -->
+                        <h2>sampah yang di kelola</h2>
+                        <p>
+                            <label id="labelTerkelolaA" for="barTerkelolaA"></label>
+                            <progress id="barTerkelolaA" value="0" max="100"></progress>
+                            <span id="spanTerkelolaA"></span>
+                        </p>
+                        <p>
+                            <label id="labelTerkelolaB" for="barTerkelolaB"></label>
+                            <progress id="barTerkelolaB" value="0" max="100"></progress>
+                            <span id="spanTerkelolaB"></span>
+                        </p>
+                        
+                        <!-- timbulan -->
+                        <h2>sampah perhari</h2>
+                        <p>
+                            <label id="labelTimbulanA" for="barTimbulanA"></label>
+                            <progress id="barTimbulanA" value="0" max="100"></progress>
+                            <span id="spanTimbulanA"></span>
+                        </p>
+                        <p>
+                            <label id="labelTimbulanB" for="barTimbulanB"></label>
+                            <progress id="barTimbulanB" value="0" max="100"></progress>
+                            <span id="spanTimbulanB"></span>
+                        </p>
+                        
+                        <!-- bsu aktif -->
+                        <h2>sampah BSU Aktif</h2>
+                        <p>
+                            <label id="labelBsuA" for="barBsuA"></label>
+                            <progress id="barBsuA" value="0" max="0"></progress>
+                            <span id="spanBsuA"></span>
+                        </p>
+                        <p>
+                            <label id="labelBsuB" for="barBsuB"></label>
+                            <progress id="barBsuB" value="0" max="0"></progress>
+                            <span id="spanBsuB"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="kolom">
+                    <div id="peringkat"></div>
+                </div>
+                <div class="kolom">
+                    <div id="detail">
+                        <div id="buttonDetail"></div>
+                        <div id="optionDetail"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- REKAPITULASI -->
         <section id="rekap" class="section">
             <h2>Rekapitulasi DKI Jakarta</h2>
@@ -469,6 +526,9 @@
         © 2026 SATU DATA - Pengelolaan Sampah DKI Jakarta
         | Menuju Indonesia Asri 🌿
     </footer>
-
+    <script src="data.js"></script>
+    <script src="adukota.js"></script>
+    <script src="peringkat.js"></script>
+    <script src="detail.js"></script>
 </body>
 </html>
