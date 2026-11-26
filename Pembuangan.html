@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard Pengelolaan Sampah DKI Jakarta">
+    <title>SATU DATA - Pengelolaan Sampah DKI Jakarta</title>
+    <link rel="stylesheet" href="edit.css">
+    <script src="AI.js" defer></script>
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <span>🌿 Kementerian Lingkungan Hidup / Badan Pengendalian Lingkungan Hidup</span>
+        <span>📅 Pembaruan 2026 | DKI Jakarta</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon">♻️</div>
+            <div>
+                <b>SATU DATA</b>
+                <small>Menuju Indonesia Asri</small>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#beranda" class="active">Beranda</a>
+            <a href="#statistik">Statistik</a>
+            <a href="#data">Detil Informasi</a>
+            <a href="#rekap">Rekapitulasi</a>
+        </nav>
+
+        <a href="#data" class="btn-login">Lihat Data</a>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="beranda" class="hero">
+            <div class="hero-left">
+                <span class="badge-hero">
+                    ✦ SISTEM INFORMASI PENGELOLAAN SAMPAH NASIONAL
+                </span>
+
+                <h1>
+                    Satu Data<br>
+                    Menuju Indonesia <span>Asri</span>
+                </h1>
+
+                <p>
+                    Data pengelolaan sampah DKI Jakarta yang terverifikasi,
+                    transparan, dan terupdate. Cari data TPA, BSU, BSI,
+                    timbulan sampah, dan progres pengelolaan per wilayah.
+                </p>
+
+                <div class="hero-btn">
+                    <a href="#data" class="btn-hijau">Jelajahi Data ➜</a>
+                    <a href="#statistik" class="btn-putih">Lihat Statistik</a>
+                </div>
+
+                <div class="hero-mini">
+                    <span>✔ Data Terverifikasi</span>
+                    <span>✔ Update 2026</span>
+                    <span>✔ 6 Wilayah</span>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <img
+                    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80"
+                    alt="Lingkungan Bersih"
+                >
+
+                <div class="hero-card-mini">
+                    <b>8.702 Ton / Hari</b>
+                    <span>Total Timbulan Sampah DKI Jakarta</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIK -->
+        <section id="statistik" class="section">
+
+            <div class="section-head">
+                <div>
+                    <span class="label-kecil">● DATA DKI JAKARTA UPDATE 2026</span>
+                    <h2>Statistik Pengelolaan Sampah</h2>
+                    <p>DKI Jakarta - 6 Kota / Kabupaten</p>
+                </div>
+
+                <button class="btn-export" onclick="exportExcel()">
+                    ▣ Export Excel
+                </button>
+            </div>
+
+            <!-- KARTU STATISTIK -->
+            <div class="grid-4">
+
+                <div class="stat-card">
+                    <small>Lokasi Pemrosesan Akhir Utama</small>
+                    <h3>1 <span>TPST</span></h3>
+                    <p>TPST Bantargebang</p>
+                </div>
+
+                <div class="stat-card">
+                    <small>Fasilitas Pendukung</small>
+                    <h3>8.615 <span>Unit</span></h3>
+                    <p>Data Pemprov DKI Jakarta</p>
+                </div>
+
+                <div class="stat-card">
+                    <small>Bank Sampah</small>
+                    <h3>2.247 <span>Unit</span></h3>
+                    <p>Data Pemprov DKI Jakarta</p>
+                </div>
+
+                <div class="stat-card">
+                    <small>TPS 3R</small>
+                    <h3>31 <span>Unit</span></h3>
+                    <p>Data Pemprov DKI Jakarta</p>
+                </div>
+
+                <div class="stat-card stat-wide">
+                    <small>Total Timbulan Sampah</small>
+                    <h3>8.702 <span>Ton/Hari</span></h3>
+                    <p>Rekapitulasi enam wilayah DKI Jakarta</p>
+                </div>
+
+            </div>
+
+            <!-- PROGRES PENGELOLAAN -->
+            <div class="grid-2">
+
+                <div class="box">
+                    <h3>Progres Pengelolaan Sampah</h3>
+
+                    <div class="donut-wrap">
+
+                        <div class="donut-box">
+                            <div class="donut donut-green"
+                                 style="--p:21.15">
+                                <div>
+                                    <b>21,15%</b>
+                                </div>
+                            </div>
+                            <span>Sampah Terkelola</span>
+                        </div>
+
+                        <div class="donut-box">
+                            <div class="donut donut-red"
+                                 style="--p:78.85">
+                                <div>
+                                    <b>78,85%</b>
+                                </div>
+                            </div>
+                            <span>Belum Terkelola</span>
+                        </div>
+
+                    </div>
+
+                    <div class="progress-list">
+                        <div>
+                            <span>Sampah Terkelola</span>
+                            <b>21,15%</b>
+                        </div>
+
+                        <div class="bar">
+                            <i style="width:21.15%"></i>
+                        </div>
+
+                        <div>
+                            <span>Sampah Belum Terkelola</span>
+                            <b>78,85%</b>
+                        </div>
+
+                        <div class="bar red">
+                            <i style="width:78.85%"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STATUS RIPS -->
+                <div class="box">
+                    <h3>Status Dokumen RIPS</h3>
+
+                    <p class="rips">
+                        6 / 6 Wilayah:
+                        <b>Ada dan Sudah Disahkan</b>
+                    </p>
+
+                    <ul class="list-wilayah">
+                        <li>Jakarta Timur <span>✔ Disahkan</span></li>
+                        <li>Jakarta Selatan <span>✔ Disahkan</span></li>
+                        <li>Jakarta Barat <span>✔ Disahkan</span></li>
+                        <li>Jakarta Utara <span>✔ Disahkan</span></li>
+                        <li>Jakarta Pusat <span>✔ Disahkan</span></li>
+                        <li>Kepulauan Seribu <span>✔ Disahkan</span></li>
+                    </ul>
+
+                    <p class="note">
+                        Progres SA:
+                        <b>Tidak ditampilkan dalam rekap</b>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- KARTU INFORMASI TAMBAHAN -->
+            <div class="grid-4">
+
+                <div class="card-hijau">
+                    <h4>Sampah Terkelola BSU</h4>
+                    <b>43,91 Ton</b>
+                    <span>Rekap enam wilayah</span>
+                </div>
+
+                <div class="card-oranye">
+                    <h4>Sampah Terkelola BSI</h4>
+                    <b>1,78 Ton</b>
+                    <span>Rekap enam wilayah</span>
+                </div>
+
+                <div class="card-hijau">
+                    <h4>BSU Aktif</h4>
+                    <b>2.402 Unit</b>
+                    <span>BSU Tidak Aktif: 663 Unit</span>
+                </div>
+
+                <div class="card-oranye">
+                    <h4>BSI Aktif</h4>
+                    <b>6 Unit</b>
+                    <span>Rekap enam wilayah</span>
+                </div>
+
+            </div>
+
+            <p class="catatan">
+                Catatan: Angka 504 TPA, 275.657.261 penduduk,
+                35.591 ton/hari, dan 25% pada screenshot merupakan
+                indikator nasional, bukan angka khusus DKI Jakarta.
+            </p>
+
+        </section>
+
+        <!-- DETAIL INFORMASI -->
+        <section id="data" class="section white-box">
+
+            <div class="section-head">
+                <div>
+                    <h2>Detil Informasi</h2>
+                    <p>
+                        Data BSU, BSI, TPA, RIPS dan Timbulan
+                        Sampah Per Wilayah
+                    </p>
+                </div>
+
+                <span class="badge-count">
+                    Menampilkan <b id="countData">6</b> dari 6 entri
+                </span>
+            </div>
+
+            <!-- PENCARIAN -->
+            <div class="search-area">
+                <input
+                    type="text"
+                    id="inputCari"
+                    placeholder="Cari wilayah, BSU, BSI, atau angka..."
+                >
+
+                <select id="filterWilayah">
+                    <option value="">Semua Wilayah</option>
+                    <option>Jakarta Timur</option>
+                    <option>Jakarta Selatan</option>
+                    <option>Jakarta Barat</option>
+                    <option>Jakarta Utara</option>
+                    <option>Jakarta Pusat</option>
+                    <option>Kepulauan Seribu</option>
+                </select>
+
+                <button onclick="cariData()">🔍 CARI</button>
+            </div>
+
+            <!-- TABEL -->
+            <div class="table-wrap">
+                <table id="tabelSampah">
+
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Wilayah</th>
+                            <th>Jenis TPA</th>
+                            <th>BSU Aktif</th>
+                            <th>BSU Tidak Aktif</th>
+                            <th>Terkelola BSU</th>
+                            <th>BSI Aktif</th>
+                            <th>Terkelola BSI</th>
+                            <th>Status RIPS</th>
+                            <th>Timbulan (Ton/Hari)</th>
+                            <th>% Terkelola</th>
+                            <th>% Belum Terkelola</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="isiTabel">
+
+                        <tr>
+                            <td>1</td>
+                            <td>Jakarta Timur</td>
+                            <td>Open Dumping</td>
+                            <td>333</td>
+                            <td>0</td>
+                            <td>5,55</td>
+                            <td>1</td>
+                            <td>0,08</td>
+                            <td>Ada dan Sudah Disahkan</td>
+                            <td>2.455</td>
+                            <td>16,28%</td>
+                            <td>83,72%</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Jakarta Selatan</td>
+                            <td>Open Dumping</td>
+                            <td>495</td>
+                            <td>0</td>
+                            <td>10,57</td>
+                            <td>1</td>
+                            <td>0,62</td>
+                            <td>Ada dan Sudah Disahkan</td>
+                            <td>2.005</td>
+                            <td>19,97%</td>
+                            <td>80,03%</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Jakarta Barat</td>
+                            <td>Open Dumping</td>
+                            <td>415</td>
+                            <td>177</td>
+                            <td>9,00</td>
+                            <td>1</td>
+                            <td>0,46</td>
+                            <td>Ada dan Sudah Disahkan</td>
+                            <td>1.943</td>
+                            <td>25,94%</td>
+                            <td>74,06%</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Jakarta Utara</td>
+                            <td>Open Dumping</td>
+                            <td>517</td>
+                            <td>272</td>
+                            <td>12,41</td>
+                            <td>1</td>
+                            <td>0,24</td>
+                            <td>Ada dan Sudah Disahkan</td>
+                            <td>1.411</td>
+                            <td>21,49%</td>
+                            <td>78,51%</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Jakarta Pusat</td>
+                            <td>Open Dumping</td>
+                            <td>619</td>
+                            <td>214</td>
+                            <td>6,10</td>
+                            <td>1</td>
+                            <td>0,36</td>
+                            <td>Ada dan Sudah Disahkan</td>
+                            <td>858</td>
+                            <td>17,68%</td>
+                            <td>82,32%</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>Kepulauan Seribu</td>
+                            <td>Open Dumping</td>
+                            <td>23</td>
+                            <td>0</td>
+                            <td>0,28</td>
+                            <td>1</td>
+                            <td>0,02</td>
+                            <td>Ada dan Sudah Disahkan</td>
+                            <td>30</td>
+                            <td>32,73%</td>
+                            <td>67,27%</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>-</td>
+                            <td><b>TOTAL DKI JAKARTA</b></td>
+                            <td>Di Luar 343 TPA</td>
+                            <td>2.402</td>
+                            <td>663</td>
+                            <td>43,91</td>
+                            <td>6</td>
+                            <td>1,78</td>
+                            <td>-</td>
+                            <td>8.702</td>
+                            <td>21,15%</td>
+                            <td>78,85%</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+
+            <p id="tidakDitemukan" class="empty-state" hidden>
+                Data tidak ditemukan! Coba kata kunci lain.
+            </p>
+
+            <p class="catatan">
+                Label kelompok di luar 343 TPA bukan berarti terdapat
+                343 TPA milik DKI Jakarta.
+            </p>
+
+        </section>
+
+        <!-- REKAPITULASI -->
+        <section id="rekap" class="section">
+            <h2>Rekapitulasi DKI Jakarta</h2>
+
+            <div class="rekap-box">
+                <p>
+                    Total Timbulan Sampah:
+                    <b>8.702 ton/hari</b>
+                    |
+                    Total BSU Aktif:
+                    <b>2.402 unit</b>
+                    |
+                    Total BSU Tidak Aktif:
+                    <b>663 unit</b>
+                    |
+                    Total BSI Aktif:
+                    <b>6 unit</b>
+                </p>
+
+                <p>
+                    Lokasi pemrosesan akhir utama:
+                    <b>TPST Bantargebang</b>
+                </p>
+
+                <p>
+                    Sumber: Rekap SIPSN dan data Pemerintah Provinsi
+                    DKI Jakarta. Periode mengikuti masing-masing sumber.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 SATU DATA - Pengelolaan Sampah DKI Jakarta
+        | Menuju Indonesia Asri 🌿
+    </footer>
+
+</body>
+</html>
